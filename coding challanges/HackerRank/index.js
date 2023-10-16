@@ -9,7 +9,6 @@
  *  2. INTEGER_ARRAY b
  */
 
-
 function compareTriplets(a, b) {
   let bobScore = 0;
   let aliceScore = 0;
@@ -30,4 +29,29 @@ function compareTriplets(a, b) {
 // 2-incorrect usage of return, using the return inside the loop and using return multiple time, which will exit the functin on the first iteration, i should use the varaibles to accumulate the scores and then return the result after the loop is done.
 
 //------------------ solution 2--------------------//
+//* DIAGONAL DIFFERENCE *//
+// @link https://www.hackerrank.com/challenges/diagonal-difference/problem
+let input = [
+  [11, 2, 4],
+  [4, 5, 6],
+  [10, 8, -12],
+];
 
+function diagonalDifference(arr) {
+  const num = arr.length;
+  let sumLeftDiagonal = 0;
+  let sumRightDiagonal = 0;
+
+  for (let i = 0; i < num; i++) {
+    sumLeftDiagonal += arr[i][i];
+    sumRightDiagonal += arr[i][num - 1 - i];
+  }
+
+  const absoluteDiagonalDifference = Math.abs(sumLeftDiagonal - sumRightDiagonal);
+  return absoluteDiagonalDifference;
+}
+
+console.log(diagonalDifference(input));
+
+// mistakes
+// pass 2 test case out of 10
