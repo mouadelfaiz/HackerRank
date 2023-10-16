@@ -28,9 +28,9 @@ function compareTriplets(a, b) {
 // 1-Incorrect initialization initializing bobScore and aliceScore inside the loop
 // 2-incorrect usage of return, using the return inside the loop and using return multiple time, which will exit the functin on the first iteration, i should use the varaibles to accumulate the scores and then return the result after the loop is done.
 
-//------------------ solution 2--------------------//
-//* DIAGONAL DIFFERENCE *//
+//------------------ DIAGONAL DIFFERENCE --------------------//
 // @link https://www.hackerrank.com/challenges/diagonal-difference/problem
+
 let input = [
   [11, 2, 4],
   [4, 5, 6],
@@ -47,11 +47,44 @@ function diagonalDifference(arr) {
     sumRightDiagonal += arr[i][num - 1 - i];
   }
 
-  const absoluteDiagonalDifference = Math.abs(sumLeftDiagonal - sumRightDiagonal);
+  const absoluteDiagonalDifference = Math.abs(
+    sumLeftDiagonal - sumRightDiagonal
+  );
   return absoluteDiagonalDifference;
 }
 
-console.log(diagonalDifference(input));
+// console.log(diagonalDifference(input));
 
 // mistakes
 // pass 2 test case out of 10
+
+//------------------ Plus Minus --------------------//
+// @link https://www.hackerrank.com/challenges/plus-minus/problem?isFullScreen=true
+
+const input2 = [-4, 3, -9, 0, 4, 1];
+
+function plusMinus(arr) {
+  // Write your code here
+  const arrLength = arr.length;
+  let positiveNum = 0;
+  let negativeNum = 0;
+  let numZero = 0;
+  for (let i = 0; i < arrLength; i++) {
+    if (arr[i] > 0) {
+      positiveNum++;
+    } else if (arr[i] < 0) {
+      negativeNum++;
+    } else {
+      numZero++;
+    }
+  }
+  const positiveNumRatio = positiveNum / arrLength;
+  const negativeNumRatio = negativeNum / arrLength;
+  const zeroRatio = numZero / arrLength;
+  console.log(positiveNumRatio.toFixed(6));
+  console.log(negativeNumRatio);
+  console.log(zeroRatio);
+}
+
+plusMinus(input2)
+// console.log(plusMinus(input2))
