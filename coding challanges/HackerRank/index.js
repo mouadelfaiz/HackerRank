@@ -86,5 +86,24 @@ function plusMinus(arr) {
   console.log(zeroRatio);
 }
 
-plusMinus(input2)
+// plusMinus(input2)
 // console.log(plusMinus(input2))
+
+//------------------ Staircase --------------------//
+
+const n = 4;
+
+function staircase(n) {
+  // Write your code here
+  let outputString = "";
+  for (let i = 1; i <= n; i++) {
+    outputString += "#"
+    console.log(outputString.split('').reverse().join(''));
+    const reversedString = outputString.split('').reverse().join('')
+    // console.log(reversedString);
+  }
+}
+
+staircase(n);
+
+
