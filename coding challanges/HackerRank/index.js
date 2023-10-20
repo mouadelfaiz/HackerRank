@@ -91,16 +91,15 @@ function plusMinus(arr) {
 
 //------------------ Staircase --------------------//
 
-const n = 4;
+const n = 6;
 
 function staircase(n) {
   // Write your code here
   let outputString = "";
+  let revesedString = "";
   for (let i = 1; i <= n; i++) {
     outputString += "#"
-    console.log(outputString.split('').reverse().join(''));
-    const reversedString = outputString.split('').reverse().join('')
-    // console.log(reversedString);
+    
   }
 }
 
