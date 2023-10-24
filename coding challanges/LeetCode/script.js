@@ -8,7 +8,7 @@ const sum = function (num1, num2){
 }
 
 //------------- 1480. Running Sum of 1D Array -------//
-
+const numbers = [1, 4, 5, 7, 8]
 
 const runningSum = function(nums) {
   let runningSum = [nums[0]];
@@ -18,3 +18,4 @@ const runningSum = function(nums) {
   return runningSum
 }
 
+console.log(runningSum(numbers));
